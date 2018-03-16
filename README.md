@@ -8,14 +8,12 @@
 
 ## 주제
 
-### OAuth 2.0
+### 1. OAuth 2.0
 
-발표자: 김정근 ([@JungleKim](https://github.com/JungleKim))
+- 발표자: 김정근 ([@JungleKim](https://github.com/JungleKim))
+- 발표일: 2018년 3월 19일 월요일
 
-발표일: 2018년 3월 19일 월요일
+### 2. HTTPS
 
-### HTTPS
-
-발표자: 이현수 ([@incleaf](https://github.com/incleaf))
-
-발표일: 2018년 3월 26일 월요일
+- 발표자: 이현수 ([@incleaf](https://github.com/incleaf))
+- 발표일: 2018년 3월 26일 월요일
