@@ -11,4 +11,5 @@
 ### OAuth 2.0
 
 발표자: [@JungleKim](https://github.com/JungleKim)
+
 발표일: 2018년 3월 19일
