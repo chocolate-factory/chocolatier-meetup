@@ -122,7 +122,7 @@ grant_type=refresh_token&refresh_token=tGzv3JOkF0XG5Qx2TlKWIA
 - 기밀 클라이언트는 일반적으로 암호(Client Password) 혹은 Public/Private키쌍을 통해 클라이언트 인증을 진행합니다.
 
 #### Client Registration Example
-![Facebook Developer Example](client-registration-example.png)
+![Facebook Developer Example](client-register-example.png)
 > 예시화면
 
 ## OAuth 2.0의 권한 획득 방법
