@@ -43,7 +43,7 @@ OpenID와 OAuth는 인증이라는 면에서는 같습니다.
 `OAuth 2.0`의 Protocol은 3-legged 방식을 표현하고 있습니다.
 자주 사용되지는 않지만 2-legged 방식도 `OAuth 2.0`에 포함됩니다.
 
-[image:protol-flow.png]
+![OAuth2 Protocol flow](protocol-flow.png)
 
 (A). 클라이언트는 리소스 소유자에게 권한을 요청한다.
 (B). 리소스 소유자는 클라이언트에 권한을 부여한다.
@@ -139,7 +139,7 @@ grant_type=refresh_token&refresh_token=tGzv3JOkF0XG5Qx2TlKWIA
 - 인증 서버에서 사용자 에이전트를 통하지 않고 바로 클라이언트로 액세스 토큰을 전달할 수 있는 등 여러가지 면에서 보안적인 혜택이 존재한다.
 - 기밀 클라이언트의 최적화되어있다.
 
-[image:authorization-code.png]
+![OAuth2 Authorization Code](authorization-code.png)
 
 #### Implicit
 - `Authorization Code`의 흐름을 단순화 한 것이며, 브라우저에서 실행되는 클라이언트에 최적화 되어있다.
@@ -147,20 +147,20 @@ grant_type=refresh_token&refresh_token=tGzv3JOkF0XG5Qx2TlKWIA
 - 클라이언트의 특성상 액세스 토큰이 다른 응용 프로그램에 노출될 가능성이 있다.
 - `Authorization Code`과 비교했을때 보안성과 효율성(요청횟수가 적음)의 트레이드 오프관계이다. 
 
-[image:implicit.png]
+![OAuth2 Implicit](implicit.png)
 
 #### Resource Owner Password Credentials
 - 리소스 소유자와 클라이언트가 신뢰할 수 있을때만 사용할 수 있다.
 - 타 인증수단을 사용할 수 없을때만 사용할것을 권장한다.
 - 토큰 엔드포인트로 요청할때 `ID/Password`를 파라미터로 담아서 요청한다.
 
-[image:resource-owner-password-credentials.png]
+![OAuth2 Resource Owner Password Credentials](resource-owner-password-credentials.png)
 
 #### Client Credentials
 - 권한 범위가 클라이언트의 제어하에 있는 리소스로 제한되거나 인증서버와 함께 배치된 리소스로 제한된 경우에만 사용할 수 있다.
 - 기밀 클라이언트인 경우에만 사용가능하다.
 
-[image:client-credentials.png]
+![OAuth2 Client Credentials](client-credentials.png)
 
 
 ## Refresh Token
@@ -170,7 +170,7 @@ grant_type=refresh_token&refresh_token=tGzv3JOkF0XG5Qx2TlKWIA
 - `Refresh Token`의 제공은 필수가 아니다.
 - Refresh Token도 하나의 `Authorization Grant`처럼 구현하여 처리한다.
 
-[image:refresh-token.png]
+![OAuth2 Refresh Token](refresh-token.png)
 
 ```
 POST /token HTTP/1.1
