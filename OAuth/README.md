@@ -30,14 +30,14 @@ OpenID와 OAuth는 인증이라는 면에서는 같습니다.
 `OAuth 2.0`에는 총 4가지의 Role이 있습니다.
 
 - `resource owner` - (리소스 소유자)
-- 리소스 접근을 허가해주는 엔티티 (주로 사용자, 사람)
+  - 리소스 접근을 허가해주는 엔티티 (주로 사용자, 사람)
 - `resource server` - (리소스 서버)
-- 리소스를 제공해주는 API서버 (Like Facebook graph api)
+  - 리소스를 제공해주는 API서버 (Like Facebook graph api)
 - `client` - (클라이언트)
-- `resource owner`의 승인을 얻어 `resource server`에 리소스 요청을 수행하는 응용프로그램
-- 어플리케이션 구성의 client와는 상관없음
+  - `resource owner`의 승인을 얻어 `resource server`에 리소스 요청을 수행하는 응용프로그램
+  - 어플리케이션 구성의 client와는 상관없음
 - `authorization server` - (인증 서버)
-- 인증과 권한 취득에 성공했을때 토큰을 발급해주는 서버
+  - 인증과 권한 취득에 성공했을때 토큰을 발급해주는 서버
 
 ## OAuth 2.0 Protocol Flow
 `OAuth 2.0`의 Protocol은 3-legged 방식을 표현하고 있습니다.
@@ -77,8 +77,8 @@ OpenID와 OAuth는 인증이라는 면에서는 같습니다.
 
 ## OAuth 2.0 Client
 - `OAuth 2.0`는 클라이언트를 미리 등록해야 사용할 수 있습니다.
-- 클라이언트 등록 방법에 대한 것은 별도로 명시되있지 않다.
-- 클라이언트와 인증 서버간의 직접적인 상호 작용은 필요하지 않다.
+  - 클라이언트 등록 방법에 대한 것은 별도로 명시되있지 않다.
+  - 클라이언트와 인증 서버간의 직접적인 상호 작용은 필요하지 않다.
 
 클라이언트 등록시 아래 사항들을 만족하면 된다.
 - 클라이언트 타입을 지정한다.
@@ -88,9 +88,9 @@ OpenID와 OAuth는 인증이라는 면에서는 같습니다.
 #### Client Types
 `OAuth 2.0`에서는 두가지 타입의 클라이언트를 정의하고 있습니다.
 - Confidential
-- 인증의 기밀성을 유지할 수 있는 클라이언트 (Web Server Application)
+  - 인증의 기밀성을 유지할 수 있는 클라이언트 (Web Server Application)
 - Public
-- 인증의 기밀성을 유지할 수 없는 클라이언트 (Native App Application, Browser)
+  - 인증의 기밀성을 유지할 수 없는 클라이언트 (Native App Application, Browser)
 
 #### Client Identifier
 - 클라이언트 등록시 인증 서버는 고유성을 가지는 식별자를 발행한다.
@@ -147,8 +147,8 @@ grant_type=refresh_token&refresh_token=tGzv3JOkF0XG5Qx2TlKWIA
 
 #### Implicit
 - `Authorization Code`의 흐름을 단순화 한 것이며, 브라우저에서 실행되는 클라이언트에 최적화 되어있다.
-- 클라이언트에서 인증코드 대신 액세스 토큰을 받는다.
-- 클라이언트의 특성상 액세스 토큰이 다른 응용 프로그램에 노출될 가능성이 있다.
+  - 클라이언트에서 인증코드 대신 액세스 토큰을 받는다.
+  - 클라이언트의 특성상 액세스 토큰이 다른 응용 프로그램에 노출될 가능성이 있다.
 - `Authorization Code`과 비교했을때 보안성과 효율성(요청횟수가 적음)의 트레이드 오프관계이다. 
 
 ![OAuth2 Implicit](implicit.png)
@@ -169,9 +169,9 @@ grant_type=refresh_token&refresh_token=tGzv3JOkF0XG5Qx2TlKWIA
 
 ## Refresh Token
 - `OAuth 2.0`에서는 액세스 토큰 만료시 새로운 액세스 토큰을 발급할 수 있는 수단을 제공합니다.
-- `OAuth 2.0`은 액세스 토큰의 유효주기를 짧게 유지합니다. (권장)
+  - `OAuth 2.0`은 액세스 토큰의 유효주기를 짧게 유지합니다. (권장)
 - 인증서버에서 `Refresh Token`을 제공하는 경우만 사용할 수 있다.
-- `Refresh Token`의 제공은 필수가 아니다.
+  - `Refresh Token`의 제공은 필수가 아니다.
 - Refresh Token도 하나의 `Authorization Grant`처럼 구현하여 처리한다.
 
 ![OAuth2 Refresh Token](refresh-token.png)
