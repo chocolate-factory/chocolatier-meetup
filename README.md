@@ -11,6 +11,7 @@
 ### 초대 멤버
 
 - 이준우 ([@JunuSinclair](https://github.com/JunuSinclair))
+- 조규진 ([@gyujincho](https://github.com/gyujincho))
 
 ## 주제
 
