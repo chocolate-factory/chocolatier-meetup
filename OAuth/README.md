@@ -22,11 +22,10 @@
 ```
 ## 참고 ##
 OpenID와 OAuth는 인증이라는 면에서는 같습니다.
-하지만, OpenID의 목적은 로그인 OAuth의 목적은 권한허가라는 점에서 차이점이 있습니다.
+하지만 OpenID의 목적은 로그인, OAuth의 목적은 권한허가라는 점에서 차이점이 있습니다.
 ```
 
 ## OAuth 2.0의 Roles
-`OAuth 2.0`의 설명에 앞서 몇가지 Role을 알아야합니다.
 `OAuth 2.0`에는 총 4가지의 Role이 있습니다.
 
 - `resource owner` - (리소스 소유자)
