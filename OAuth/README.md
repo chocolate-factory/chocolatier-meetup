@@ -1,5 +1,4 @@
 # OAuth 정리
-#스터디/oauth2
 
 ## OAuth란?
 `OAuth`는 외부서비스에서 리소스를 사용하려할때, 계정과 암호의 노출없이 권한을 인증할 수 있는 표준입니다.(Open Standard Protocol)
@@ -55,11 +54,11 @@ OpenID와 OAuth는 인증이라는 면에서는 같습니다.
 `OAuth 2.0`은 인증 과정중에 총 3개의 Endpoint를 사용합니다.
 인증 서버에 2개와 클라이언트에서 1개를 사용합니다.
 
--> 인증 서버
+**인증 서버**
 - `Authorization Endpoint`
 - `Token Endpoint`
 
--> 클라이언트
+**클라이언트**
 - `Redirection Endpoint`
 
 #### Authorization Endpoint
@@ -99,13 +98,13 @@ OpenID와 OAuth는 인증이라는 면에서는 같습니다.
 - 클라이언트 인증시 사용하는 인증수단
 - 클라이언트 암호를 발급하는 방식과 클라이언트 시크릿을 발급하는 방식 두가지가 있다.
 
--> 암호 발급방식
+**암호 발급방식**
 - Http Basic 인증 방식을 지원해야한다.
 ```
 Authorization: Basic czZCaGRSa3F0Mzo3RmpmcDBaQnIxS3REUmJuZlZkbUl3
 ```
 
--> 클라이언트 시크릿을 발급하는 방식
+**클라이언트 시크릿을 발급하는 방식**
 - Http Basic 방식 대신 `client_id`와 `client_secret`을 request body에 포함한다.
 ```
 POST /token HTTP/1.1
