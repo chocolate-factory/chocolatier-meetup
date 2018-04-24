@@ -185,9 +185,3 @@ Content-Type: application/x-www-form-urlencoded
 grant_type=refresh_token&refresh_token=tGzv3JOkF0XG5Qx2TlKWIA
 ```
 
----
-## 코멘트
-- 챕터 넘어가기전에 질문의 시간이 있으면 좋겠다.
-- 포맷이 줄글이다보니 지루했다. 
-  - 부가설명할 애들이 있으면 좋을듯
-- 발표자와 듣는 사람들과 상호작용이 있었으면 좋았을것 같다.
