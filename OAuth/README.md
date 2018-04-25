@@ -1,12 +1,7 @@
 # OAuth 정리
 
 ## OAuth란?
-`OAuth`는 외부서비스에서 리소스를 사용하려할때, 계정과 암호의 노출없이 권한을 인증할 수 있는 표준입니다.(Open Standard Protocol)
-
-`OAuth`는 2006년 트위터 개발자들과 Gnolia 개발자들의 논의를 시작으로 탄생했습니다.
-
-`OAuth`가 탄생하기 전 회사들은 각각 인증방식을 구현했습니다.
-이렇게 파편화된 인증방식들을 통합한 표준이라고 할 수 있습니다.
+`OAuth`는 외부서비스에서 리소스를 사용하려할때, 계정과 암호의 노출없이 권한을 인증할 수 있는 표준(Open Standard)입니다. `OAuth`는 2006년 트위터 개발자들과 Gnolia 개발자들의 논의를 시작으로 탄생했습니다. `OAuth`가 탄생하기 전 회사들은 각각 인증방식을 구현하여 사용했고, 파편화된 인증방식들을 통합한 표준을 `OAuth`라고 할 수 있습니다.
 
 `OAuth 1.0a`와 `OAuth 2.0` 두 가지가 존재하고 최근에는 `OAuth 2.0`을 더 많이 사용합니다.
 
@@ -21,7 +16,7 @@
 ```
 ## 참고 ##
 OpenID와 OAuth는 인증이라는 면에서는 같습니다.
-하지만 OpenID의 목적은 로그인, OAuth의 목적은 권한허가라는 점에서 차이점이 있습니다.
+하지만 OpenID의 목적은 로그인, OAuth의 목적은 권한허가라는 점에 차이가 있습니다.
 ```
 
 ## OAuth 2.0의 Roles
@@ -38,8 +33,7 @@ OpenID와 OAuth는 인증이라는 면에서는 같습니다.
   - 인증과 권한 취득에 성공했을때 토큰을 발급해주는 서버
 
 ## OAuth 2.0 Protocol Flow
-`OAuth 2.0`의 Protocol은 3-legged 방식을 표현하고 있습니다.
-자주 사용되지는 않지만 2-legged 방식도 `OAuth 2.0`에 포함됩니다.
+`OAuth 2.0`의 Protocol은 3-legged 방식을 표현하고 있습니다. 자주 사용되지는 않지만 2-legged 방식도 `OAuth 2.0`에 포함됩니다.
 
 ![OAuth2 Protocol flow](protocol-flow.png)
 
@@ -51,8 +45,7 @@ OpenID와 OAuth는 인증이라는 면에서는 같습니다.
 6. 리소스 서버는 클라이언트에 리소스를 전달한다.
 
 ## OAuth 2.0 Protocol Endpoint
-`OAuth 2.0`은 인증 과정중에 총 3개의 Endpoint를 사용합니다.
-인증 서버에 2개와 클라이언트에서 1개를 사용합니다.
+`OAuth 2.0`가 인증 과정중에 사용하는 Endpoint는 인증 서버에 2개와 클라이언트에 1개로 총 3개가 있습니다.
 
 **인증 서버**
 - `Authorization Endpoint`
@@ -62,29 +55,30 @@ OpenID와 OAuth는 인증이라는 면에서는 같습니다.
 - `Redirection Endpoint`
 
 #### Authorization Endpoint
-사용자의 신원을 확인하고 권한을 허가받기 위해 사용한다.
-사용자의 신원을 확인하는 방법은 별도로 명시되어 있지않다. (주로 세션사용)
+- 사용자의 신원을 확인하고 권한을 허가받기 위해 사용한다.
+- 사용자의 신원을 확인하는 방법은 별도로 명시되어 있지않다. (주로 세션사용)
 
 #### Token Endpoint
-`Authorization Grant` 혹은 `Refresh Token`을 토큰으로 교환할때 사용한다.
-`Token Endpoint` 클라이언트 인증을 진행해야한다.
+- `Authorization Grant` 혹은 `Refresh Token`을 토큰으로 교환할때 사용한다.
+- `Token Endpoint` 클라이언트 인증을 진행해야한다.
 
 #### Redirection Endpoint
-`Authorization Endpoint`의 결과를 클라이언트로 전송할때 사용한다.
-`Authorization Endpoint`로 넘긴 값 혹은 미리 등록해둔 값을 통해 Redirect한다.
+- `Authorization Endpoint`의 결과를 클라이언트로 전송할때 사용한다.
+- `Authorization Endpoint`로 넘긴 값 혹은 미리 등록해둔 값을 통해 Redirect한다.
 
 ## OAuth 2.0 Client
-- `OAuth 2.0`는 클라이언트를 미리 등록해야 사용할 수 있습니다.
+- `OAuth 2.0`는 클라이언트를 미리 등록해야 사용할 수 있다.
   - 클라이언트 등록 방법에 대한 것은 별도로 명시되있지 않다.
   - 클라이언트와 인증 서버간의 직접적인 상호 작용은 필요하지 않다.
 
-클라이언트 등록시 아래 사항들을 만족하면 된다.
+**클라이언트의 최소 조건**
 - 클라이언트 타입을 지정한다.
 - Redirect URI를 지정한다.
 - 인증서버가 요구하는 기타정보를 입력한다. (이름, web사이트, 설명, 이미지 등 Like Facebook Developer)
 
 #### Client Types
 `OAuth 2.0`에서는 두가지 타입의 클라이언트를 정의하고 있습니다.
+
 - Confidential
   - 인증의 기밀성을 유지할 수 있는 클라이언트 (Web Server Application)
 - Public
@@ -124,8 +118,7 @@ grant_type=refresh_token&refresh_token=tGzv3JOkF0XG5Qx2TlKWIA
 > 예시화면
 
 ## OAuth 2.0의 권한 획득 방법
-`OAuth 2.0`에서 권한 획득 방법을 `Authorization Grant`라고 명명하고 있습니다.
-`Authorization Grant`는 굉장히 유연한 방식으로 위 프로토콜만 구현하면 (때로 일부분이 생략되더라도) 권한 획득 방법중 한가지로 사용할 수 있습니다.
+`OAuth 2.0`에서 권한 획득 방법을 `Authorization Grant`라고 명명하고 있습니다. `Authorization Grant`는 굉장히 유연한 방식으로 위 프로토콜만 구현하면 (때로 일부분이 생략되더라도) 권한 획득 방법중 한가지로 사용할 수 있습니다.
 
 [RFC 6749 - The OAuth 2.0 Authorization Framework](https://tools.ietf.org/html/rfc6749) 문서에서는 4가지의 `Authorization Grant`를 정의하고 있습니다.
 
