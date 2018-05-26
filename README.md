@@ -47,4 +47,3 @@
 
 - 발표자: 양희찬 ([@yangroro](https://github.com/yangroro))
 - 발표일: 2018년 4월 16일 월요일
-- [발표자료](OAuth/README.md)
