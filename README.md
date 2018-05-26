@@ -37,11 +37,14 @@
 
 - 발표자: 김정근 ([@JungleKim](https://github.com/JungleKim))
 - 발표일: 2018년 3월 19일 월요일, 2018년 3월 26일 월요일
-- [발표자료](OAuth/README.md)
 
 ### 2. Javascript Engine & Runtime
 
 - 발표자: 이준우 ([@JunuSinclair](https://github.com/JunuSinclair))
-- 발표일: 2018년 4월 2일
+- 발표일: 2018년 4월 2일 월요일
 
+### 3. Docker
 
+- 발표자: 양희찬 ([@yangroro](https://github.com/yangroro))
+- 발표일: 2018년 4월 16일 월요일
+- [발표자료](OAuth/README.md)
